@@ -7,7 +7,10 @@ module.exports = {
 	name: 'brotli',
 	* func(file, opts) {
 		opts = Object.assign({}, defs, opts);
-		const comp = compress(file.data.toString(), opts);
-		file.data = new Buffer(comp);
+		const comp = compress(file.data.toString(), opts).file.output.concat('.br');
+        const compressedFile = comp.output.concat('.br');
+		file.data = new Buffer(compressedFile);
+
+        file.push();
 	}
 };
