@@ -7,7 +7,7 @@ module.exports = {
 	name: 'brotli',
 	* func(file, opts) {
 		opts = Object.assign({}, defs, opts);
-		const comp = compress(fs.readFileSync('myfile.bin'), opts);
+		const comp = compress(file, opts);
 		file.data = new Buffer(comp);
 	}
 };
