@@ -1,6 +1,6 @@
 {
   "name": "fly-brotli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Generate brotli compressed files using fly.js",
   "main": "index.js",
   "scripts": {
